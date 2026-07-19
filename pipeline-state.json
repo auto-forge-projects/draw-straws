@@ -1,39 +1,12 @@
 {
   "schema_version": 2,
-  "revision": 32,
+  "revision": 36,
   "project": "draw-straws",
   "workspace": "workspace/draw-straws",
   "profile": "LITE",
-  "current_phase": 6,
+  "current_phase": 9,
   "status": "running",
-  "active_agents": [
-    {
-      "agent": "developer",
-      "model": "sonnet",
-      "phase": 6,
-      "task": "UI/UX prototipleri",
-      "started_at": "2026-07-19T22:39:00.000Z",
-      "last_update": "2026-07-19T22:39:00.000Z",
-      "via": "inline"
-    },
-    {
-      "agent": "security-reviewer",
-      "model": "opus",
-      "phase": 7,
-      "task": "Güvenlik değerlendirmesi",
-      "started_at": "2026-07-19T22:39:00.000Z",
-      "last_update": "2026-07-19T22:39:00.000Z"
-    },
-    {
-      "agent": "business-analyst",
-      "model": "sonnet",
-      "phase": 8,
-      "task": "Planlama artefaktı",
-      "started_at": "2026-07-19T22:39:00.000Z",
-      "last_update": "2026-07-19T22:39:00.000Z",
-      "via": "inline"
-    }
-  ],
+  "active_agents": [],
   "phases": {
     "0": {
       "mode": "AUTOPILOT",
@@ -89,27 +62,42 @@
     },
     "6": {
       "mode": "AUTOPILOT",
-      "status": "running",
+      "status": "done",
       "started_at": "2026-07-19T22:39:00.000Z",
-      "artifacts": [],
-      "decisions": [],
-      "gate_passed": false
+      "artifacts": [
+        "docs/06-uiux.md"
+      ],
+      "decisions": [
+        "DL-06-001"
+      ],
+      "gate_passed": true,
+      "completed_at": "2026-07-19T22:42:00.000Z"
     },
     "7": {
       "mode": "AUTOPILOT",
-      "status": "running",
+      "status": "done",
       "started_at": "2026-07-19T22:39:00.000Z",
-      "artifacts": [],
-      "decisions": [],
-      "gate_passed": false
+      "artifacts": [
+        "docs/07-security.md"
+      ],
+      "decisions": [
+        "DL-07-001"
+      ],
+      "gate_passed": true,
+      "completed_at": "2026-07-19T22:42:00.000Z"
     },
     "8": {
       "mode": "AUTOPILOT",
-      "status": "running",
+      "status": "done",
       "started_at": "2026-07-19T22:39:00.000Z",
-      "artifacts": [],
-      "decisions": [],
-      "gate_passed": false
+      "artifacts": [
+        "docs/08-plan.md"
+      ],
+      "decisions": [
+        "DL-08-001"
+      ],
+      "gate_passed": true,
+      "completed_at": "2026-07-19T22:42:00.000Z"
     },
     "1-2": {
       "mode": "AUTOPILOT",
@@ -181,7 +169,7 @@
     "model_calls": {},
     "notes": ""
   },
-  "updated_at": "2026-07-19T22:38:02.491Z",
+  "updated_at": "2026-07-19T22:41:07.717Z",
   "default_mode": "AUTOPILOT",
   "checkpoints": [
     {
