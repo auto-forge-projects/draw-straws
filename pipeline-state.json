@@ -1,12 +1,29 @@
 {
   "schema_version": 2,
-  "revision": 46,
+  "revision": 49,
   "project": "draw-straws",
   "workspace": "workspace/draw-straws",
   "profile": "LITE",
-  "current_phase": 9,
+  "current_phase": 10,
   "status": "running",
-  "active_agents": [],
+  "active_agents": [
+    {
+      "agent": "code-reviewer",
+      "model": "opus",
+      "phase": 10,
+      "task": "Blind Code Review — Faz 9 diff",
+      "started_at": "2026-07-19T23:15:00.000Z",
+      "last_update": "2026-07-19T23:15:00.000Z"
+    },
+    {
+      "agent": "test-engineer",
+      "model": "sonnet",
+      "phase": 11,
+      "task": "Test planı + entegrasyon/E2E testleri",
+      "started_at": "2026-07-19T23:15:00.000Z",
+      "last_update": "2026-07-19T23:15:00.000Z"
+    }
+  ],
   "phases": {
     "0": {
       "mode": "AUTOPILOT",
@@ -153,6 +170,16 @@
       ],
       "completed_at": "2026-07-19T23:05:00.000Z"
     },
+    "10": {
+      "mode": "AUTOPILOT",
+      "status": "running",
+      "started_at": "2026-07-19T23:15:00.000Z"
+    },
+    "11": {
+      "mode": "AUTOPILOT",
+      "status": "running",
+      "started_at": "2026-07-19T23:15:00.000Z"
+    },
     "1-2": {
       "mode": "AUTOPILOT",
       "status": "done",
@@ -217,13 +244,18 @@
       "event": "recovered",
       "phase": 3,
       "detail": "STALE_UNFLAGGED: kapı geçiyordu, DL mevcuttu, status=done ile kapatıldı (pipeline-resume)"
+    },
+    {
+      "event": "phase_started",
+      "phase": 11,
+      "detail": "Faz 11 (Test) subagent'a devredildi (10 ile paralel, deps grafı)"
     }
   ],
   "budget": {
     "model_calls": {},
     "notes": ""
   },
-  "updated_at": "2026-07-19T23:12:32.137Z",
+  "updated_at": "2026-07-19T23:14:19.125Z",
   "default_mode": "AUTOPILOT",
   "checkpoints": [
     {
