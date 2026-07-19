@@ -1,20 +1,55 @@
 {
   "schema_version": 2,
-  "revision": 0,
+  "revision": 7,
   "project": "draw-straws",
   "workspace": "workspace/draw-straws",
-  "repo_mode": "per-repo",
   "profile": "LITE",
-  "current_phase": null,
+  "current_phase": "1-2",
   "status": "pending",
   "active_agents": [],
-  "phases": {},
+  "phases": {
+    "0": {
+      "mode": "AUTOPILOT",
+      "status": "done",
+      "note": "0b onaylandı + Faz 0 idea üretildi",
+      "artifacts": [
+        "docs/00-refined-brief.md"
+      ],
+      "decisions": [
+        "DL-00-001"
+      ],
+      "gate_passed": true,
+      "completed_at": "2026-07-19T22:05:00.000Z"
+    }
+  },
   "feedback_loops": [],
   "pending_human_review": [],
-  "history": [],
+  "history": [
+    {
+      "event": "refine",
+      "phase": 0,
+      "detail": "0b rafine brief üretildi — kullanıcı onayı bekleniyor"
+    },
+    {
+      "at": "2026-07-19T21:39:00.428Z",
+      "event": "mode_changed",
+      "detail": "AUTOPILOT (aktif+sonrası; fazlar: 0)"
+    },
+    {
+      "at": "2026-07-19T21:59:21.654Z",
+      "event": "mode_changed",
+      "detail": "AUTOPILOT (aktif+sonrası; fazlar: 0)"
+    },
+    {
+      "event": "phase_completed",
+      "phase": 0,
+      "detail": "Faz 0 (Fikir/Intake) tamamlandı — gate structural geçti"
+    }
+  ],
   "budget": {
     "model_calls": {},
     "notes": ""
   },
-  "updated_at": null
+  "updated_at": "2026-07-19T22:02:38.726Z",
+  "default_mode": "AUTOPILOT"
 }
