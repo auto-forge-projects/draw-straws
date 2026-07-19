@@ -1,12 +1,22 @@
 {
   "schema_version": 2,
-  "revision": 15,
+  "revision": 20,
   "project": "draw-straws",
   "workspace": "workspace/draw-straws",
   "profile": "LITE",
-  "current_phase": "1-2",
-  "status": "pending",
-  "active_agents": [],
+  "current_phase": 3,
+  "status": "running",
+  "active_agents": [
+    {
+      "agent": "business-analyst",
+      "model": "sonnet",
+      "phase": 3,
+      "task": "Requirement Analizi artefaktı",
+      "started_at": "2026-07-19T22:35:00.000Z",
+      "last_update": "2026-07-19T22:35:00.000Z",
+      "via": "inline"
+    }
+  ],
   "phases": {
     "0": {
       "mode": "AUTOPILOT",
@@ -20,6 +30,15 @@
       ],
       "gate_passed": true,
       "completed_at": "2026-07-19T22:05:00.000Z"
+    },
+    "3": {
+      "mode": "AUTOPILOT",
+      "status": "done",
+      "started_at": "2026-07-19T22:35:00.000Z",
+      "artifacts": [],
+      "decisions": [],
+      "gate_passed": true,
+      "completed_at": "2026-07-19T22:28:49.555Z"
     },
     "1-2": {
       "mode": "AUTOPILOT",
@@ -74,13 +93,24 @@
       "event": "phase_completed",
       "phase": "1-2",
       "detail": "Faz 1-2 (Değer & Fizibilite) tamamlandı — gate structural geçti, GO kararı"
+    },
+    {
+      "at": "2026-07-19T22:35:00.000Z",
+      "event": "phase_started",
+      "phase": 3,
+      "detail": "Faz 3 (Requirement Analizi) başladı"
+    },
+    {
+      "event": "recovered",
+      "phase": 3,
+      "detail": "STALE_UNFLAGGED: kapı geçiyordu, DL mevcuttu, status=done ile kapatıldı (pipeline-resume)"
     }
   ],
   "budget": {
     "model_calls": {},
     "notes": ""
   },
-  "updated_at": "2026-07-19T22:24:32.890Z",
+  "updated_at": "2026-07-19T22:28:54.576Z",
   "default_mode": "AUTOPILOT",
   "checkpoints": [
     {
