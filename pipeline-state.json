@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "revision": 7,
+  "revision": 15,
   "project": "draw-straws",
   "workspace": "workspace/draw-straws",
   "profile": "LITE",
@@ -20,6 +20,19 @@
       ],
       "gate_passed": true,
       "completed_at": "2026-07-19T22:05:00.000Z"
+    },
+    "1-2": {
+      "mode": "AUTOPILOT",
+      "status": "done",
+      "started_at": "2026-07-19T22:25:00.000Z",
+      "artifacts": [
+        "docs/01-02-value-feasibility.md"
+      ],
+      "decisions": [
+        "DL-01-001"
+      ],
+      "gate_passed": true,
+      "completed_at": "2026-07-19T22:30:00.000Z"
     }
   },
   "feedback_loops": [],
@@ -44,12 +57,36 @@
       "event": "phase_completed",
       "phase": 0,
       "detail": "Faz 0 (Fikir/Intake) tamamlandı — gate structural geçti"
+    },
+    {
+      "at": "2026-07-19T22:20:54.753Z",
+      "event": "mode_changed",
+      "detail": "AUTOPILOT (aktif+sonrası; fazlar: yalnız default_mode)"
+    },
+    {
+      "at": "2026-07-19T22:25:00.000Z",
+      "event": "phase_started",
+      "phase": "1-2",
+      "detail": "Faz 1+2 (Değer & Fizibilite, LITE birleşik) başladı"
+    },
+    {
+      "at": "2026-07-19T22:30:00.000Z",
+      "event": "phase_completed",
+      "phase": "1-2",
+      "detail": "Faz 1-2 (Değer & Fizibilite) tamamlandı — gate structural geçti, GO kararı"
     }
   ],
   "budget": {
     "model_calls": {},
     "notes": ""
   },
-  "updated_at": "2026-07-19T22:02:38.726Z",
-  "default_mode": "AUTOPILOT"
+  "updated_at": "2026-07-19T22:24:32.890Z",
+  "default_mode": "AUTOPILOT",
+  "checkpoints": [
+    {
+      "phase": "1-2",
+      "at": "2026-07-19T22:24:08.534Z",
+      "note": "GO kararı verildi (tek cihaz/elden ele, 2-20 oyuncu, tam 1 kısa çöp varsayımlarıyla). 4 KPI tanımlı (gecikme ≤1sn, adalet ±%2, docker≤15dk, sayfa≤200KB). Açık sorular (tek/çok cihaz, max oyuncu, çoklu kısa çöp) Faz 3e devredildi."
+    }
+  ]
 }
