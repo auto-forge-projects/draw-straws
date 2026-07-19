@@ -1,21 +1,12 @@
 {
   "schema_version": 2,
-  "revision": 24,
+  "revision": 26,
   "project": "draw-straws",
   "workspace": "workspace/draw-straws",
   "profile": "LITE",
-  "current_phase": 4,
+  "current_phase": 5,
   "status": "running",
-  "active_agents": [
-    {
-      "agent": "architect",
-      "model": "opus",
-      "phase": 4,
-      "task": "Çözüm Analizi artefaktı",
-      "started_at": "2026-07-19T22:33:00.000Z",
-      "last_update": "2026-07-19T22:33:00.000Z"
-    }
-  ],
+  "active_agents": [],
   "phases": {
     "0": {
       "mode": "AUTOPILOT",
@@ -45,11 +36,16 @@
     },
     "4": {
       "mode": "AUTOPILOT",
-      "status": "running",
+      "status": "done",
       "started_at": "2026-07-19T22:33:00.000Z",
-      "artifacts": [],
-      "decisions": [],
-      "gate_passed": false
+      "artifacts": [
+        "docs/04-solution-analysis.md"
+      ],
+      "decisions": [
+        "DL-04-001"
+      ],
+      "gate_passed": true,
+      "completed_at": "2026-07-19T22:40:00.000Z"
     },
     "1-2": {
       "mode": "AUTOPILOT",
@@ -121,7 +117,7 @@
     "model_calls": {},
     "notes": ""
   },
-  "updated_at": "2026-07-19T22:32:18.273Z",
+  "updated_at": "2026-07-19T22:35:10.353Z",
   "default_mode": "AUTOPILOT",
   "checkpoints": [
     {
