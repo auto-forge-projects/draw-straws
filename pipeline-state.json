@@ -1,12 +1,39 @@
 {
   "schema_version": 2,
-  "revision": 30,
+  "revision": 32,
   "project": "draw-straws",
   "workspace": "workspace/draw-straws",
   "profile": "LITE",
   "current_phase": 6,
   "status": "running",
-  "active_agents": [],
+  "active_agents": [
+    {
+      "agent": "developer",
+      "model": "sonnet",
+      "phase": 6,
+      "task": "UI/UX prototipleri",
+      "started_at": "2026-07-19T22:39:00.000Z",
+      "last_update": "2026-07-19T22:39:00.000Z",
+      "via": "inline"
+    },
+    {
+      "agent": "security-reviewer",
+      "model": "opus",
+      "phase": 7,
+      "task": "Güvenlik değerlendirmesi",
+      "started_at": "2026-07-19T22:39:00.000Z",
+      "last_update": "2026-07-19T22:39:00.000Z"
+    },
+    {
+      "agent": "business-analyst",
+      "model": "sonnet",
+      "phase": 8,
+      "task": "Planlama artefaktı",
+      "started_at": "2026-07-19T22:39:00.000Z",
+      "last_update": "2026-07-19T22:39:00.000Z",
+      "via": "inline"
+    }
+  ],
   "phases": {
     "0": {
       "mode": "AUTOPILOT",
@@ -59,6 +86,30 @@
       ],
       "gate_passed": true,
       "completed_at": "2026-07-19T22:40:00.000Z"
+    },
+    "6": {
+      "mode": "AUTOPILOT",
+      "status": "running",
+      "started_at": "2026-07-19T22:39:00.000Z",
+      "artifacts": [],
+      "decisions": [],
+      "gate_passed": false
+    },
+    "7": {
+      "mode": "AUTOPILOT",
+      "status": "running",
+      "started_at": "2026-07-19T22:39:00.000Z",
+      "artifacts": [],
+      "decisions": [],
+      "gate_passed": false
+    },
+    "8": {
+      "mode": "AUTOPILOT",
+      "status": "running",
+      "started_at": "2026-07-19T22:39:00.000Z",
+      "artifacts": [],
+      "decisions": [],
+      "gate_passed": false
     },
     "1-2": {
       "mode": "AUTOPILOT",
@@ -130,7 +181,7 @@
     "model_calls": {},
     "notes": ""
   },
-  "updated_at": "2026-07-19T22:37:17.404Z",
+  "updated_at": "2026-07-19T22:38:02.491Z",
   "default_mode": "AUTOPILOT",
   "checkpoints": [
     {
