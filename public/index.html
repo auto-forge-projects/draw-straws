@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Çöp Çekme</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<main>
+  <h1>Çöp Çekme</h1>
+
+  <section id="screen-setup" class="screen">
+    <label for="playerCount">Kaç oyuncu? (2-20)</label>
+    <input type="number" id="playerCount" min="2" max="20" placeholder="Kaç oyuncu? (2-20)" autocomplete="off" />
+    <p id="setupWarning" class="warning" role="alert" hidden>2 ile 20 arası bir sayı girin.</p>
+    <button id="shuffleBtn" type="button" disabled aria-disabled="true">Çöpleri Karıştır</button>
+  </section>
+
+  <section id="screen-draw" class="screen" hidden>
+    <p id="turnIndicator" class="turn-indicator"></p>
+    <div id="strawGrid" class="straw-grid"></div>
+  </section>
+
+  <section id="screen-result" class="screen" hidden>
+    <div id="resultCard" class="result-card"></div>
+    <p id="ariaLiveResult" aria-live="polite" class="sr-announce"></p>
+    <button id="redrawBtn" type="button">Yeniden Çek</button>
+  </section>
+</main>
+<script src="shuffle.js"></script>
+<script src="game.js"></script>
+</body>
+</html>
