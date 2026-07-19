@@ -1,12 +1,21 @@
 {
   "schema_version": 2,
-  "revision": 26,
+  "revision": 28,
   "project": "draw-straws",
   "workspace": "workspace/draw-straws",
   "profile": "LITE",
   "current_phase": 5,
   "status": "running",
-  "active_agents": [],
+  "active_agents": [
+    {
+      "agent": "architect",
+      "model": "opus",
+      "phase": 5,
+      "task": "Mimari Tasarım artefaktı",
+      "started_at": "2026-07-19T22:36:00.000Z",
+      "last_update": "2026-07-19T22:36:00.000Z"
+    }
+  ],
   "phases": {
     "0": {
       "mode": "AUTOPILOT",
@@ -46,6 +55,14 @@
       ],
       "gate_passed": true,
       "completed_at": "2026-07-19T22:40:00.000Z"
+    },
+    "5": {
+      "mode": "AUTOPILOT",
+      "status": "running",
+      "started_at": "2026-07-19T22:36:00.000Z",
+      "artifacts": [],
+      "decisions": [],
+      "gate_passed": false
     },
     "1-2": {
       "mode": "AUTOPILOT",
@@ -117,7 +134,7 @@
     "model_calls": {},
     "notes": ""
   },
-  "updated_at": "2026-07-19T22:35:10.353Z",
+  "updated_at": "2026-07-19T22:35:25.251Z",
   "default_mode": "AUTOPILOT",
   "checkpoints": [
     {
