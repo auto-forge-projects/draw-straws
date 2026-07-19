@@ -1,22 +1,12 @@
 {
   "schema_version": 2,
-  "revision": 20,
+  "revision": 22,
   "project": "draw-straws",
   "workspace": "workspace/draw-straws",
   "profile": "LITE",
   "current_phase": 3,
-  "status": "running",
-  "active_agents": [
-    {
-      "agent": "business-analyst",
-      "model": "sonnet",
-      "phase": 3,
-      "task": "Requirement Analizi artefaktı",
-      "started_at": "2026-07-19T22:35:00.000Z",
-      "last_update": "2026-07-19T22:35:00.000Z",
-      "via": "inline"
-    }
-  ],
+  "status": "done",
+  "active_agents": [],
   "phases": {
     "0": {
       "mode": "AUTOPILOT",
@@ -35,8 +25,12 @@
       "mode": "AUTOPILOT",
       "status": "done",
       "started_at": "2026-07-19T22:35:00.000Z",
-      "artifacts": [],
-      "decisions": [],
+      "artifacts": [
+        "docs/03-requirements.md"
+      ],
+      "decisions": [
+        "DL-03-001"
+      ],
       "gate_passed": true,
       "completed_at": "2026-07-19T22:28:49.555Z"
     },
@@ -110,7 +104,7 @@
     "model_calls": {},
     "notes": ""
   },
-  "updated_at": "2026-07-19T22:28:54.576Z",
+  "updated_at": "2026-07-19T22:31:54.976Z",
   "default_mode": "AUTOPILOT",
   "checkpoints": [
     {
