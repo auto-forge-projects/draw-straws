@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "revision": 36,
+  "revision": 46,
   "project": "draw-straws",
   "workspace": "workspace/draw-straws",
   "profile": "LITE",
@@ -99,6 +99,60 @@
       "gate_passed": true,
       "completed_at": "2026-07-19T22:42:00.000Z"
     },
+    "9": {
+      "mode": "AUTOPILOT",
+      "status": "done",
+      "started_at": "2026-07-19T22:43:00.000Z",
+      "artifacts": [
+        "src/server.js",
+        "public/shuffle.js",
+        "public/index.html",
+        "public/style.css",
+        "public/game.js",
+        "Dockerfile",
+        "tests/shuffle.test.js",
+        "tests/health.test.js"
+      ],
+      "decisions": [
+        "DL-09-001"
+      ],
+      "gate_passed": true,
+      "tasks": [
+        {
+          "title": "TASK-001: server.js+health",
+          "status": "done"
+        },
+        {
+          "title": "TASK-002: shuffle (crypto+rejection sampling)",
+          "status": "done"
+        },
+        {
+          "title": "TASK-003: S1 kurulum ekranı",
+          "status": "done"
+        },
+        {
+          "title": "TASK-004: S2 elden-ele akış",
+          "status": "done"
+        },
+        {
+          "title": "TASK-005: S3 sonuç ekranı",
+          "status": "done"
+        },
+        {
+          "title": "TASK-006: Dockerfile+audit",
+          "status": "done"
+        },
+        {
+          "title": "npm test yeşil + coverage",
+          "status": "done"
+        },
+        {
+          "title": "commit+push",
+          "status": "done"
+        }
+      ],
+      "completed_at": "2026-07-19T23:05:00.000Z"
+    },
     "1-2": {
       "mode": "AUTOPILOT",
       "status": "done",
@@ -169,7 +223,7 @@
     "model_calls": {},
     "notes": ""
   },
-  "updated_at": "2026-07-19T22:41:07.717Z",
+  "updated_at": "2026-07-19T23:12:32.137Z",
   "default_mode": "AUTOPILOT",
   "checkpoints": [
     {
