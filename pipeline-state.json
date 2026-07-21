@@ -1,29 +1,12 @@
 {
   "schema_version": 2,
-  "revision": 49,
+  "revision": 69,
   "project": "draw-straws",
   "workspace": "workspace/draw-straws",
   "profile": "LITE",
   "current_phase": 10,
   "status": "running",
-  "active_agents": [
-    {
-      "agent": "code-reviewer",
-      "model": "opus",
-      "phase": 10,
-      "task": "Blind Code Review — Faz 9 diff",
-      "started_at": "2026-07-19T23:15:00.000Z",
-      "last_update": "2026-07-19T23:15:00.000Z"
-    },
-    {
-      "agent": "test-engineer",
-      "model": "sonnet",
-      "phase": 11,
-      "task": "Test planı + entegrasyon/E2E testleri",
-      "started_at": "2026-07-19T23:15:00.000Z",
-      "last_update": "2026-07-19T23:15:00.000Z"
-    }
-  ],
+  "active_agents": [],
   "phases": {
     "0": {
       "mode": "AUTOPILOT",
@@ -172,13 +155,58 @@
     },
     "10": {
       "mode": "AUTOPILOT",
-      "status": "running",
-      "started_at": "2026-07-19T23:15:00.000Z"
+      "status": "done",
+      "started_at": "2026-07-19T23:15:00.000Z",
+      "gate_passed": true,
+      "completed_at": "2026-07-21T20:30:00.000Z"
     },
     "11": {
       "mode": "AUTOPILOT",
-      "status": "running",
-      "started_at": "2026-07-19T23:15:00.000Z"
+      "status": "done",
+      "started_at": "2026-07-19T23:15:00.000Z",
+      "gate_passed": true,
+      "completed_at": "2026-07-21T20:30:00.000Z",
+      "artifacts": [
+        "docs/11-test/test-plan.md",
+        "docs/11-test/results.md"
+      ],
+      "decisions": [
+        "DL-11-001"
+      ],
+      "tasks": [
+        {
+          "title": "E2E test dosyasını incele (kesinti noktası)",
+          "status": "done"
+        },
+        {
+          "title": "npm test kök neden analizi (createDraw ReferenceError)",
+          "status": "done"
+        },
+        {
+          "title": "loadPage() gerçek <script> enjeksiyonuna çevir",
+          "status": "done"
+        },
+        {
+          "title": "\"abc\" test varsayımını type=number semantiğine düzelt",
+          "status": "done"
+        },
+        {
+          "title": "npm test yeşil (23/23)",
+          "status": "done"
+        },
+        {
+          "title": "test-plan.md + results.md yaz",
+          "status": "done"
+        },
+        {
+          "title": "DL-11-001 yaz",
+          "status": "done"
+        },
+        {
+          "title": "commit+push",
+          "status": "in_progress"
+        }
+      ]
     },
     "1-2": {
       "mode": "AUTOPILOT",
@@ -249,19 +277,74 @@
       "event": "phase_started",
       "phase": 11,
       "detail": "Faz 11 (Test) subagent'a devredildi (10 ile paralel, deps grafı)"
+    },
+    {
+      "at": "2026-07-20T10:06:13.280Z",
+      "event": "mode_changed",
+      "detail": "AUTOPILOT (aktif+sonrası; fazlar: 10, 11)"
+    },
+    {
+      "at": "2026-07-21T08:21:48.093Z",
+      "event": "mode_changed",
+      "detail": "AUTOPILOT (aktif+sonrası; fazlar: 10, 11)"
+    },
+    {
+      "at": "2026-07-21T11:21:07.811Z",
+      "event": "mode_changed",
+      "detail": "AUTOPILOT (aktif+sonrası; fazlar: 10, 11)"
+    },
+    {
+      "at": "2026-07-21T11:22:26.540Z",
+      "event": "mode_changed",
+      "detail": "AUTOPILOT (aktif+sonrası; fazlar: 10, 11)"
+    },
+    {
+      "at": "2026-07-21T19:08:38.092Z",
+      "event": "mode_changed",
+      "detail": "AUTOPILOT (aktif+sonrası; fazlar: 10, 11)"
+    },
+    {
+      "at": "2026-07-21T20:17:23.558Z",
+      "event": "mode_changed",
+      "detail": "AUTOPILOT (aktif+sonrası; fazlar: 10, 11)"
+    },
+    {
+      "event": "recovered",
+      "phase": 9,
+      "detail": "GATE_MISMATCH: npm test artık exit 0 (23/23) — kök neden Faz 11 e2e test harness hatasıydı (indirect-eval strict-mode izolasyonu), Faz 9 kodu (src/,public/) DEĞİŞMEDİ. Gate yeniden doğrulandı (pipeline-resume)."
+    },
+    {
+      "event": "recovered",
+      "phase": 10,
+      "detail": "STALE_UNFLAGGED: DL-10-001 + docs/10-review/PR-1.md zaten mevcuttu (staged, commitlenmemiş) — status=done+gate_passed ile kapatıldı (pipeline-resume)."
+    },
+    {
+      "event": "recovered",
+      "phase": 11,
+      "detail": "ORPHANED_RUN: tests/e2e/ui-flow.test.js yarım kesilmişti (8/22 kalıyordu). Kök neden analiziyle 2 test-harness hatası düzeltildi (script yükleme + type=number sanitizasyon varsayımı); Faz 9 kodu değişmedi. test-plan.md+results.md+DL-11-001 yazıldı, npm test 23/23 yeşil. (pipeline-resume)"
+    },
+    {
+      "at": "2026-07-21T21:25:14.909Z",
+      "event": "mode_changed",
+      "detail": "AUTOPILOT (aktif+sonrası; fazlar: yalnız default_mode)"
     }
   ],
   "budget": {
     "model_calls": {},
     "notes": ""
   },
-  "updated_at": "2026-07-19T23:14:19.125Z",
+  "updated_at": "2026-07-21T21:25:14.975Z",
   "default_mode": "AUTOPILOT",
   "checkpoints": [
     {
       "phase": "1-2",
       "at": "2026-07-19T22:24:08.534Z",
       "note": "GO kararı verildi (tek cihaz/elden ele, 2-20 oyuncu, tam 1 kısa çöp varsayımlarıyla). 4 KPI tanımlı (gecikme ≤1sn, adalet ±%2, docker≤15dk, sayfa≤200KB). Açık sorular (tek/çok cihaz, max oyuncu, çoklu kısa çöp) Faz 3e devredildi."
+    },
+    {
+      "phase": "10-11",
+      "at": "2026-07-21T20:24:47.632Z",
+      "note": "Faz 10 (review, APPROVE, 1 Major/2 Minor/2 Nit) ve Faz 11 (test, 23/23 yeşil, e2e katman FR-1/3/4/6) tamamlandı. Faz 12 (CI/CD) hazır — deps grafı yalnız Faz 11e bağımlı."
     }
   ]
 }
