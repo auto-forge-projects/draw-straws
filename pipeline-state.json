@@ -1,10 +1,10 @@
 {
   "schema_version": 2,
-  "revision": 84,
+  "revision": 88,
   "project": "draw-straws",
   "workspace": "workspace/draw-straws",
   "profile": "LITE",
-  "current_phase": 14,
+  "current_phase": 15,
   "status": "running",
   "active_agents": [],
   "phases": {
@@ -253,6 +253,19 @@
       ],
       "completed_at": "2026-07-22T07:42:00.000Z"
     },
+    "14": {
+      "mode": "AUTOPILOT",
+      "status": "done",
+      "started_at": "2026-07-22T07:41:00.000Z",
+      "gate_passed": true,
+      "decisions": [
+        "DL-14-001"
+      ],
+      "artifacts": [
+        "docs/14-monitoring.md"
+      ],
+      "completed_at": "2026-07-22T07:44:00.000Z"
+    },
     "1-2": {
       "mode": "AUTOPILOT",
       "status": "done",
@@ -388,7 +401,7 @@
     "model_calls": {},
     "notes": ""
   },
-  "updated_at": "2026-07-22T07:39:50.291Z",
+  "updated_at": "2026-07-22T07:41:06.374Z",
   "default_mode": "AUTOPILOT",
   "checkpoints": [
     {
@@ -405,6 +418,11 @@
       "phase": 12,
       "at": "2026-07-21T21:38:04.459Z",
       "note": "CI/CD scaffold (ci.yml+Dockerfile) projeye uygun bulundu, ekstra adım eklenmedi; docker build yerelde doğrulandı; state.product dolduruldu (dashboard çalıştırma paneli); deploy.json zaten enabled:true+host_port:5002."
+    },
+    {
+      "phase": 13,
+      "at": "2026-07-22T07:40:04.482Z",
+      "note": "Release v0.1.0 tamamlandı (M1/FR-1..FR-6 kapsandı). Rollback: durumsuz mimari → yalnız kod/imaj rollback, veri migrasyonu yok. deploy.json enabled:true, host_port:5002, proxy:nginx hazır."
     }
   ],
   "product": {
