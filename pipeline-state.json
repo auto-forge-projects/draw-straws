@@ -1,10 +1,10 @@
 {
   "schema_version": 2,
-  "revision": 69,
+  "revision": 81,
   "project": "draw-straws",
   "workspace": "workspace/draw-straws",
   "profile": "LITE",
-  "current_phase": 10,
+  "current_phase": 12,
   "status": "running",
   "active_agents": [],
   "phases": {
@@ -208,6 +208,38 @@
         }
       ]
     },
+    "12": {
+      "mode": "AUTOPILOT",
+      "status": "done",
+      "started_at": "2026-07-21T21:40:00.000Z",
+      "tasks": [
+        {
+          "title": "CI workflow (ci.yml) node projesine uygunluk kontrolü",
+          "status": "done"
+        },
+        {
+          "title": "Dockerfile build testi (docker build)",
+          "status": "done"
+        },
+        {
+          "title": "state.product doldur (dashboard çalıştırma paneli)",
+          "status": "done"
+        },
+        {
+          "title": "DL-12-001 yaz",
+          "status": "done"
+        },
+        {
+          "title": "commit+push",
+          "status": "done"
+        }
+      ],
+      "gate_passed": true,
+      "completed_at": "2026-07-21T21:38:30.000Z",
+      "decisions": [
+        "DL-12-001"
+      ]
+    },
     "1-2": {
       "mode": "AUTOPILOT",
       "status": "done",
@@ -327,13 +359,23 @@
       "at": "2026-07-21T21:25:14.909Z",
       "event": "mode_changed",
       "detail": "AUTOPILOT (aktif+sonrası; fazlar: yalnız default_mode)"
+    },
+    {
+      "event": "phase_completed",
+      "phase": 12,
+      "detail": "CI/CD: mevcut workflow+Dockerfile yeterli, docker build doğrulandı, state.product dolduruldu, DL-12-001"
+    },
+    {
+      "at": "2026-07-22T07:36:16.610Z",
+      "event": "mode_changed",
+      "detail": "AUTOPILOT (aktif+sonrası; fazlar: yalnız default_mode)"
     }
   ],
   "budget": {
     "model_calls": {},
     "notes": ""
   },
-  "updated_at": "2026-07-21T21:25:14.975Z",
+  "updated_at": "2026-07-22T07:37:56.072Z",
   "default_mode": "AUTOPILOT",
   "checkpoints": [
     {
@@ -345,6 +387,37 @@
       "phase": "10-11",
       "at": "2026-07-21T20:24:47.632Z",
       "note": "Faz 10 (review, APPROVE, 1 Major/2 Minor/2 Nit) ve Faz 11 (test, 23/23 yeşil, e2e katman FR-1/3/4/6) tamamlandı. Faz 12 (CI/CD) hazır — deps grafı yalnız Faz 11e bağımlı."
+    },
+    {
+      "phase": 12,
+      "at": "2026-07-21T21:38:04.459Z",
+      "note": "CI/CD scaffold (ci.yml+Dockerfile) projeye uygun bulundu, ekstra adım eklenmedi; docker build yerelde doğrulandı; state.product dolduruldu (dashboard çalıştırma paneli); deploy.json zaten enabled:true+host_port:5002."
     }
-  ]
+  ],
+  "product": {
+    "name": "draw-straws",
+    "version": "0.1.0",
+    "type": "web-app",
+    "docker_image": "draw-straws:0.1.0",
+    "auto_run": false,
+    "commands": {
+      "build": "docker build -t draw-straws:0.1.0 .",
+      "test": "npm test",
+      "run": "docker run -d --rm -p 3000:3000 --name draw-straws draw-straws:0.1.0"
+    },
+    "links": [
+      {
+        "label": "README",
+        "path": "README.md"
+      },
+      {
+        "label": "Mimari",
+        "path": "docs/05-architecture.md"
+      },
+      {
+        "label": "Test sonuçları",
+        "path": "docs/11-test/results.md"
+      }
+    ]
+  }
 }
